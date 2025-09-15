@@ -5,22 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abrham Taye | Aspiring Full Stack Software Engineer</title>
   <style>
+    /* Global Styles */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       background: #f4f7fb;
       color: #333;
+      scroll-behavior: smooth;
     }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Header */
     header {
       background: linear-gradient(135deg, #2c3e50, #4ca1af);
       color: #fff;
-      padding: 3rem 1rem;
+      padding: 4rem 1rem 2rem;
       text-align: center;
     }
     header img {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       border: 4px solid #fff;
       margin-bottom: 1rem;
@@ -28,20 +35,43 @@
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
     header p {
       margin: 0.5rem 0 0;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-style: italic;
     }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #fff;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      font-weight: bold;
+      color: #2c3e50;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #4ca1af;
+    }
+
+    /* Section */
     section {
       max-width: 900px;
       margin: 2rem auto;
-      padding: 1.5rem;
+      padding: 2rem;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
     h2 {
       color: #2c3e50;
@@ -49,48 +79,153 @@
       border-bottom: 2px solid #eee;
       padding-bottom: 0.5rem;
     }
+    p {
+      line-height: 1.7;
+    }
+
+    /* Projects */
     .project {
       background: #fafafa;
       border: 1px solid #ddd;
       border-radius: 8px;
       padding: 1rem;
       margin-bottom: 1rem;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .project:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
+
+    /* Elevator Pitch */
+    .pitch {
+      background: #eaf6f6;
+      border-left: 4px solid #4ca1af;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+
+    /* Contact */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .contact-info a {
+      color: #4ca1af;
+      font-weight: bold;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .contact-form input, 
+    .contact-form textarea {
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+    }
+    .contact-form button {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 6px;
+      background: #4ca1af;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #2c3e50;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       background: #2c3e50;
       color: #fff;
-      padding: 1rem;
+      padding: 1.5rem;
       margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <!-- Replace placeholder.jpg with your real photo -->
     <img src="./photo_2025-06-25_16-30-58.jpg" alt="Profile Photo">
     <h1>Abrham Taye</h1>
     <p>“Aspiring Full Stack Software Engineer”</p>
   </header>
 
-  <section>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#pitch">Elevator Pitch</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
     <h2>About Me</h2>
     <p>
       I’m a passionate software engineering student with a strong interest in product development. 
-      I build prediction-based gaming apps using React Native, and I’m always exploring new 
-      technologies and practices to level up my skills.
+      I enjoy learning new technologies, improving my skills, and contributing to meaningful projects.
     </p>
   </section>
 
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Prediction-Based Gaming App (Coming Soon)</h3>
+      <p>
+        A mobile and web app built with React Native where users predict match outcomes in groups. 
+        Features include entry fees, leaderboards, wallet integration, and monetization. 
+        <br><strong>Status:</strong> In development — stay tuned for live demo and code.
+      </p>
+    </div>
+    <div class="project">
+      <h3>Portfolio Placeholder Project</h3>
+      <p>
+        This section will showcase additional projects and accomplishments. Each project will include 
+        a description, technologies used, and a link to demo/code repository.
+      </p>
+    </div>
+  </section>
 
+  <section id="pitch">
+    <h2>Elevator Pitch</h2>
+    <div class="pitch">
+      Hi, I’m Abrham Taye, an aspiring Full Stack Software Engineer with strong skills in React Native 
+      and web development. I am passionate about building impactful products and solving real-world 
+      problems. I am eager to contribute to innovative projects and collaborate with teams that value 
+      creativity and efficiency.
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:abrhamtayetessfaye@gmail.com">abrham@example.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/abrhamtaye" target="_blank">linkedin.com/in/abrhamtaye</a></p>
+      <p>GitHub: <a href="https://github.com/abrhamtaye7" target="_blank">github.com/abrhamtaye</a></p>
+    </div>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
     <p>© 2025 Abrham Taye | Portfolio</p>
   </footer>
+
 </body>
 </html>
+
+
